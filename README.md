@@ -16,9 +16,10 @@ For Developers.
 
 **Setup**: Setup requires certain environment variables on your machine to be set in order for the application to access secret values, these values are listed below.
 * Clone or Fork our repository.
-* Create a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
-* `pip install -r requirements.txt`.
-* Ensure you have a [database](https://www.postgresql.org/docs/9.1/static/app-createdb.html), and a [user / password](https://www.postgresql.org/docs/9.1/static/app-createuser.html) with [all privileges](https://www.postgresql.org/docs/9.0/static/sql-grant.html), the app will look for this connection using credentials stored in enviornment variables, you can get more details on this below.
+* Create and activate a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+* Ensure you have a [PostgreSQL database](https://www.postgresql.org/docs/9.1/static/app-createdb.html), and a [user / password](https://www.postgresql.org/docs/9.1/static/app-createuser.html) with [all privileges](https://www.postgresql.org/docs/9.0/static/sql-grant.html), the app will look for this connection using credentials stored in enviornment variables, you can get more details on this below.
+* To install PostgreSQL, use `sudo apt-get install postgresql-server-dev-9.1`.  Otherwise, you may encounter an error installing the pip dependencies.
+* Install the dependencies `pip install -r requirements.txt`.
 * It is required when running `python manage.py <function>` that you explicitly state what settings module you are using.
   * Use `--settings=civiwiki.settings.local` to run the application with your local database credentials.
   * Use `--settings=civiwiki.settings.dev` to run the application on a development server you have hosted.
